@@ -11,7 +11,7 @@ title                    : "Site Title"
 title_separator          : "-"
 name                     : "Michael Wagner"
 description              : "A School Project."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://miwagner1.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -61,10 +61,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Michael Wagner"
   avatar           : "bio-photo.jpg"
   bio              : "I am an amazing person."
-  location         : "Somewhere"
+  location         : "Texas"
   email            :
   uri              :
   bitbucket        :
