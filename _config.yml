@@ -109,6 +109,7 @@ defaults:
       path: ""
       type: pages
     values:
+      author_profile: false
       layout: single
   # _foo
   - scope:
