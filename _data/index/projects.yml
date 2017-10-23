@@ -15,8 +15,8 @@
   img: /static/assets/img/landing/ZeroTier.png
   desc: A Smart Ethernet Switch for Earth.
 
-#- name: Google
-#  i18n: google
-#  url: https://google.com
-#  img: /static/assets/img/landing/google.png
-#  desc: This is another project.
+- name: RetroArch
+  i18n: RetroArch
+  url: https://www.libretro.com
+  img: /static/assets/img/landing/RetroArch.png
+  desc: A simple API that allows for the creation of games and emulators.
