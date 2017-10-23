@@ -27,3 +27,17 @@
     detail: Electronics Associate
     i18n: company_b_job
   icon: fa-plus-square
+
+- name:
+    detail: Fry's Food And Drug
+    i18n: company_c
+  desc:
+    detail: I worked at Fry's Food And Drug till Sept. 2012.
+    i18n: company_c_desc
+  date:
+    detail: Jun. 2011
+    i18n: company_c_date
+  job:
+    detail: Courtesy clerk
+    i18n: company_c_job
+  icon: fa-plus-square
