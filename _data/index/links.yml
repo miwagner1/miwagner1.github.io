@@ -1,8 +1,8 @@
 # links section data
 - last_name: IRC
   first_name:
-  desc: Connect to the IRC Network
-  website: https://www.vmnode.pw:9000
+  desc: Connect to TheLounge IRC Client
+  website: www.vmnode.pw:9000
 
 #- last_name: Donate
 #  first_name: Jalpc
