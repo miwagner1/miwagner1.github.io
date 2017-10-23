@@ -1,106 +1,68 @@
 ---
-layout: landing-page
+layout: blog
+title: index
+permalink: /
 ---
 
-		<!-- One -->
-			<section id="one" class="wrapper style1">
-				<header class="major">
-					<!--<h2>Ipsum feugiat consequat</h2>-->
-				<h5>Meetings are held Every third Wednesday at 3 pm in the CASA 103, Building 4</h5>
-						<h5><address>9191 Barker Cypress Rd, Cypress TX 77433, United States</address></h5>
-				</header>
-				<div class="container">
-					<div class="row">
-						<div class="4u">
-							<section class="special box">
-								<!--<i class="icon fa-area-chart major"></i>-->
-								<h3>Directions To The Upcoming Event</h3>
-								<p style="text-align:left;">Cypress, Texas VFW Post 8905<br>
-								21902 Northwest Freeway Cypress TX 77429, (281)469-6632<br>
-							</section>
-						</div>
-						<div class="4u">
-							<section class="special box">
-								<!--<i class="icon fa-refresh major"></i>-->
-								<h3>Contact Information</h3>
-								<p style="text-align:left;"><b>Club President:</b> Sam Daugherty<br>
-									<b>Phone:</b> (281)847-5518<br>
-									<b>Email:</b> vanla.group@lonestar.edu
-								</p>
-							</section>
-						</div>
-						<div class="4u">
-							<section class="special box">
-								<!--<i class="icon fa-cog major"></i>-->
-								<h3>Let is know if you plan to join us in the next event.</a></h3>
-								<ul class="actions">
-										<li><h3><a href="https://drive.google.com/open?id=15lCR1ND6Djq1QCXE8-lpMtSapTpf8kqfJuUsFL7wlHw" class="button alt">RSVP</a></h3></li>
-								</ul>
-						</div>
-					</div>
-				</div>
-			</section>
+<div class="navbar-wrapper">
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">{{ site.title }}</span></a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right" id="i18_navbar">
+          {% for section in site.data.landing %}
+          <li>
+            {% if section.page %}
+              <a class="page-scroll" href="{{ section.page}} ">
+            {% else %}
+              <a class="page-scroll" href="{{ section.id | prepend: '#'}} ">
+            {% endif %}
+              <span data-i18n="{{ section.i18n }}">{{ section.name }}</span>
+            </a>
+          </li>
+          {% endfor %}
+          {% for language in site.data.index.language %}
+          <li>
+            <a id="set_lang_{{ language.locale }}" class="btn btn-sm set_{{ language.locale }}" data-locale="{{ language.locale }}">
+              <img src="{{ language.flag | prepend: site.baseurl }}" height="16" width="16">
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+{% if site.index_carousel %}
+{% include carousel.html %}
+{% endif %}
 
-		<!-- Two -->
-			<section id="two" class="wrapper style2">
-				<header class="major">
-					<h2>Come join us</h2>
-					<p>The upcomming school party is for Veterans and students to come together,<br> mingle and have a lot of fun with ongoing events.</p>
-					<ul class="actions">
-							<li><h3><a href="https://drive.google.com/open?id=0B7j9dfuywmv1WEljS3ZSeldaTmM" class="button alt">Brochure</a></h3></li>
-					</ul>
-				</header>
-				<div class="container">
-					<div class="row">
-						<div class="6u">
-							<section class="special">
-								<img class="image fit" src="images/pic01.jpg" alt="eating table" />
-								<h3>We love our Veterans</h3>
-								<p>A club created by Lone Star College students, Sam, Michael, Dale, and Heather, to honor fellow Veterans who attend Lone Star. We want our veterans to be welcomed home, and be integrated back into society without being viewed as outcasts. This club will help Veterans return to their civilian lives, as well as be able to share stories and information with others who are interested in what they do.</p>
-							</section>
-						</div>
-						<div class="6u">
-							<section class="special">
-								<img class="image fit" src="images/pic02.jpg" alt="eating table" />
-								<h3>Food and Beverages</h3>
-								<p>The food will be cooked by Jeremy from Bulldog Mountain, recent winners of the 2016 Houston Rodeo cook off overall Grand Champions. For beverages there will be a verity of soda, water and tea along with one beer per person.</p>
-							</section>
-						</div>
-					</div>
-				</div>
-			</section>
-
-		<!-- Three
-			<section id="three" class="wrapper style1">
-				<div class="container">
-					<div class="row">
-						<div class="8u">
-							<section>
-								<h2>Mollis ut adipiscing</h2>
-								<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-								<p>Vis accumsan feugiat adipiscing nisl amet adipiscing accumsan blandit accumsan sapien blandit ac amet faucibus aliquet placerat commodo. Interdum ante aliquet commodo accumsan vis phasellus adipiscing. Ornare a in lacinia. Vestibulum accumsan ac metus massa tempor. Accumsan in lacinia ornare massa amet. Ac interdum ac non praesent. Cubilia lacinia interdum massa faucibus blandit nullam. Accumsan phasellus nunc integer. Accumsan euismod nunc adipiscing lacinia erat ut sit. Arcu amet. Id massa aliquet arcu accumsan lorem amet accumsan commodo odio cubilia ac eu interdum placerat placerat arcu commodo lobortis adipiscing semper ornare pellentesque.</p>
-							</section>
-						</div>
-						<div class="4u">
-							<section>
-								<h3>Magna massa blandit</h3>
-								<p>Feugiat amet accumsan ante aliquet feugiat accumsan. Ante blandit accumsan eu amet tortor non lorem felis semper. Interdum adipiscing orci feugiat penatibus adipiscing col cubilia lorem ipsum dolor sit amet feugiat consequat.</p>
-								<ul class="actions">
-									<li><a href="#" class="button alt">Learn More</a></li>
-								</ul>
-							</section>
-							<hr />
-							<section>
-								<h3>Ante sed commodo</h3>
-								<ul class="alt">
-									<li><a href="#">Erat blandit risus vis adipiscing</a></li>
-									<li><a href="#">Tempus ultricies faucibus amet</a></li>
-									<li><a href="#">Arcu commodo non adipiscing quis</a></li>
-									<li><a href="#">Accumsan vis lacinia semper</a></li>
-								</ul>
-							</section>
-						</div>
-					</div>
-				</div>
-			</section>
-			-->
+{% for section in site.data.landing %}
+{% assign loopindex = forloop.index | modulo: 2 %}
+<section id="{{ section.id }}" class="features {% if loopindex != 1 %} gray-section {% endif %} {{ section.css }}" style="margin-top: 0;">
+  {% include sections/{{section.tpl}} %}
+</section>
+{% endfor %}
+<style>
+iframe {
+  -moz-transform: scale(0.25, 0.25);
+  -webkit-transform: scale(0.25, 0.25);
+  -o-transform: scale(0.25, 0.25);
+  -ms-transform: scale(0.25, 0.25);
+  transform: scale(0.25, 0.25);
+  -moz-transform-origin: top left;
+  -webkit-transform-origin: top left;
+  -o-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+}
+</style>
+<iframe src="https://www.maimemo.com/share/page/?uid=779139&pid=660" style="display: none;"></iframe>
