@@ -7,11 +7,11 @@
 - last_name: LoneStar
   first_name:
   desc: Go to the Lone Star College website
-  website: http://http://www.lonestar.edu
+  website: http://www.lonestar.edu
 #  email: me@jarrekk.com
 
-#- last_name: LN
-#  first_name: FN
-#  desc: COO
-#  website: https://github.com
+- last_name: Cisco Networking Academy
+  first_name:
+  desc:  IT skills and career building program
+  website: https://www.netacad.com
 #  email: coo@google.com
