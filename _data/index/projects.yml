@@ -21,9 +21,3 @@
   repo: lounge
   img: /static/assets/img/landing/thelounge.png
   desc: Modern self-hosted web IRC client.
-
-- name: Libretro
-  i18n: Libretro
-  url: https://www.libretro.com
-  img: /static/assets/img/landing/RetroArch.png
-  desc: Simple API that allows for the creation of games and emulators.
