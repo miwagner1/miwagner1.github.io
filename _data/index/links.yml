@@ -4,10 +4,10 @@
   desc: Connect to TheLounge IRC Client
   website: https://vmnode.pw:9000
 
-#- last_name: Donate
-#  first_name: Jalpc
-#  desc: Support Jalpc
-#  website: http://www.jarrekk.com/donate/
+- last_name: LoneStar
+  first_name:
+  desc: Lone Star College
+  website: http://http://www.lonestar.edu
 #  email: me@jarrekk.com
 
 #- last_name: LN
