@@ -15,7 +15,7 @@
   img: /static/assets/img/landing/ZeroTier.png
   desc: Smart Ethernet Switch for Earth.
   
-  - name: The Lounge
+- name: The Lounge
   i18n: TheLounge
   gh_user: thelounge
   repo: lounge
