@@ -1,12 +1,12 @@
 # projects section data
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
-#- name: jekyll
-#  i18n: jekyll
-#  gh_user: miwagner1
-#  repo: jekyll
-#  img: /static/assets/img/landing/jekyll.png
-#  desc: This Open source project powers my webpage.
+- name: jekyll
+  i18n: jekyll
+  gh_user: jekyll
+  repo: jekyll
+  img: /static/assets/img/landing/jekyll.png
+  desc: A blog-aware, static site generator in Ruby.
 
 #- name: Python
 #  i18n: cpython
