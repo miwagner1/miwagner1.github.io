@@ -15,8 +15,8 @@
   img: /static/assets/img/landing/ZeroTier.png
   desc: A Smart Ethernet Switch for Earth.
 
-- name: RetroArch
-  i18n: RetroArch
+- name: Libretro
+  i18n: Libretro
   url: https://www.libretro.com
   img: /static/assets/img/landing/RetroArch.png
   desc: A simple API that allows for the creation of games and emulators.
