@@ -2,7 +2,7 @@
 - last_name: IRC
   first_name:
   desc: Connect to TheLounge IRC Client
-  website: www.vmnode.pw:9000
+  website: https://vmnode.pw:9000
 
 #- last_name: Donate
 #  first_name: Jalpc
