@@ -6,7 +6,7 @@
   gh_user: jekyll
   repo: jekyll
   img: /static/assets/img/landing/jekyll.png
-  desc: Blog-aware, static site generator in Ruby.
+  desc: Blog-aware, static site generator.
 
 - name: ZeroTier One
   i18n: ZeroTierOne
