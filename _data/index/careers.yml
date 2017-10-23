@@ -18,10 +18,10 @@
     detail: Walmart
     i18n: company_b
   desc:
-    detail: I worked at Walmart till Oct. 2017.
+    detail: Provided information on the products in question and help with picking out the best product for their use and budget. Give assistance with cellphone activation and resolving technical issues. Duties include inventory management and maintenance.
     i18n: company_b_desc
   date:
-    detail: Jun. 2014
+    detail: Jun. 2014 - Oct. 2017
     i18n: company_b_date
   job:
     detail: Electronics Associate
