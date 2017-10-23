@@ -8,12 +8,12 @@
   img: /static/assets/img/landing/jekyll.png
   desc: A blog-aware, static site generator in Ruby.
 
-#- name: Python
-#  i18n: cpython
-#  gh_user: python
-#  repo: cpython
-#  img: /static/assets/img/landing/python.png
-#  desc: This project is other's project. I use another request to get repo's information.
+- name: ZeroTier One
+  i18n: ZeroTierOne
+  gh_user: zerotier
+  repo: ZeroTierOne
+  img: /static/assets/img/landing/ZeroTier.png
+  desc: A Smart Ethernet Switch for Earth.
 
 #- name: Google
 #  i18n: google
