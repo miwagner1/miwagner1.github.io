@@ -5,3 +5,5 @@
 /k8s/authelia/overlays/production/secret/MYSQL_USER
 /k8s/authelia/overlays/production/secret/REDIS_PASS
 /k8s/authelia/overlays/production/authelia-config.yaml
+/k8s/cert-manager/cloudflare-secret.yml
+/k8s/cert-manager/letsencrypt.yaml
