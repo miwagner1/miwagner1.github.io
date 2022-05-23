@@ -1,0 +1,132 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: znc
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: znc
+  namespace: znc
+  labels:
+    app: znc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: znc
+  #  minReadySeconds: 10 
+  template:
+    metadata:
+      labels:
+        app: znc
+    spec:
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: znc
+        image: lscr.io/linuxserver/znc:1.8.2
+        ports:
+        - name: irc
+          containerPort: 6501
+        - name: http
+          containerPort: 6502
+        resources:
+          limits:
+            memory: "100Mi"
+          requests:
+            memory: "50Mi"
+        volumeMounts:
+        - name: volv
+          readOnly: false
+          mountPath: "/config"
+        livenessProbe:
+          exec:
+            command:
+            - ls
+            - /config/lost+found
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        imagePullPolicy: IfNotPresent
+  volumeClaimTemplates:
+  - metadata:
+      name: volv
+    spec:
+      resources:
+        requests:
+          storage: 2Gi
+      accessModes: ["ReadWriteOnce"]
+      storageClassName: "longhorn"
+  serviceName: "znc"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: znc
+  namespace: znc
+  labels:
+    name: znc
+spec:
+  selector:
+    app: znc
+  ports:
+  - name: irc
+    protocol: TCP
+    port: 6501
+    targetPort: 6501
+  - name: http
+    protocol: TCP
+    port: 6502
+    targetPort: 6502
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: znc
+  namespace: znc
+spec:
+  entryPoints:
+  - web
+  - websecure
+  routes:
+  - kind: Rule
+    match: Host(`znc.vmnode.com`)
+    middlewares:
+    - name: chain-authelia
+      namespace: default
+    services:
+    - name: znc
+      namespace: znc
+      port: 6502
+  tls:
+    secretName: znc-vmnode-com-tls
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRouteTCP
+metadata:
+  name: znc
+  namespace: znc
+spec:
+  entryPoints:
+  - irc
+  routes:
+  - match: HostSNI(`znc.vmnode.com`)
+    services:
+    - name: znc
+      namespace: znc
+      port: 6501
+  tls:
+    secretName: znc-vmnode-com-tls
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: znc-vmnode-com
+  namespace: znc
+spec:
+  dnsNames:
+  - znc.vmnode.com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  secretName: znc-vmnode-com-tls
