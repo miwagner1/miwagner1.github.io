@@ -7,3 +7,4 @@
 /k8s/authelia/overlays/production/authelia-config.yaml
 /k8s/cert-manager/cloudflare-secret.yml
 /k8s/cert-manager/letsencrypt.yaml
+/k8s/metallb/values.yaml
